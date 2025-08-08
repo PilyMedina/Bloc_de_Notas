@@ -34,12 +34,14 @@ def test_ver(buscador):
     Ec.element_to_be_clickable((By.LINK_TEXT, "Ver pizarra"))
     )
    boton_ver.click()
+   time.sleep(7)
 
     
 
    boton_volver = WebDriverWait(buscador, 5).until(
-    Ec.element_to_be_clickable((By.LINK_TEXT, "Volver al menu"))
+    Ec.element_to_be_clickable((By.LINK_TEXT, "Volver al menú"))
     )
    boton_volver.click()
 
-   time.sleep(5)
+   time.sleep(7)
+

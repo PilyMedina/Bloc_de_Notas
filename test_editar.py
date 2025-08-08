@@ -37,7 +37,7 @@ def test_editar(buscador):
     titulo = WebDriverWait(buscador, 10).until(
         Ec.presence_of_element_located((By.NAME, "titulo"))
     )
-    titulo.send_keys(" NOTA ACTUALIZADA POR PILY")
+    titulo.send_keys("NOTA ACTUALIZADA POR PILY")
 
     contenido = buscador.find_element(By.NAME, "contenido")
     contenido.send_keys("Contenido de prueba para la nota con selenium. CONTENIDO ACTUALIZADO LOL")
