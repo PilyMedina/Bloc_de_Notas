@@ -35,15 +35,18 @@ def test_crear_nota(buscador):
     Ec.element_to_be_clickable((By.LINK_TEXT, "Crear nueva nota"))
     )
     boton_crear.click()
+    time.sleep(5)
 
 
     titulo = WebDriverWait(buscador, 10).until(
         Ec.presence_of_element_located((By.NAME, "titulo"))
     )
     titulo.send_keys("NUEVA NOTA")
+    time.sleep(5)
 
     contenido = buscador.find_element(By.NAME, "contenido")
     contenido.send_keys("Contenido de prueba para la nota con selenium.")
+    time.sleep(5)
 
     boton_guardar = buscador.find_element(By.XPATH, "//button[@type='submit']")
     boton_guardar.click()
