@@ -1,0 +1,10 @@
+.env
+.env.*
+
+# Ignorar caché de Python
+__pycache__/
+ 
+# Ignorar caché de pytest
+.pytest_cache/
+ 
+ Blogger/
