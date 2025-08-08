@@ -29,10 +29,12 @@ def test_login(buscador):
 
 def test_eliminar(buscador):
      
-    boton_eliminar = WebDriverWait(buscador, 10).until(
+    boton_eliminar = WebDriverWait(buscador, 20).until(
     Ec.element_to_be_clickable((By.LINK_TEXT, "Eliminar"))
     )
     boton_eliminar.click()
+    time.sleep(10)
+
 
     alerta = WebDriverWait(buscador, 10).until(Ec.alert_is_present())
     alerta.accept()
